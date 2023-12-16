@@ -22,8 +22,7 @@ Add-Type -AssemblyName System.Windows.Forms
 $ErrorActionPreference = "SilentlyContinue"
 
 # Pulls system public IP.
-# Utilizes CloudFlare's icanhazip website which provides the public IP.
-
+# Utilizes ipify.org's website which provides the public IP.
 
 try {
     $MyPubIP = (Invoke-RestMethod -Uri "https://api64.ipify.org?format=json" -ErrorAction Stop).ip
